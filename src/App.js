@@ -1,5 +1,5 @@
-
-import React from 'react'
+import React from "react";
+import { Route, IndexRoute, Router, browserHistory } from "react-router";
 import { Form } from 'semantic-ui-react'
     	const options = [
     	  { key: 'm', text: 'Male', value: 'male' },
