@@ -5,7 +5,7 @@ const Footer = () => (
     <hr />
     <p className="pull-right">
       <i className="fa fa-github" aria-hidden="true" />
-        &nbsp;&nbsp; Proudly buildtd by team KISS
+        &nbsp;&nbsp; Proudly buildt by team KISS
     </p>
   </footer>
 );

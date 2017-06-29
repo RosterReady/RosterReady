@@ -1,58 +1,68 @@
 import React from "react";
 import { Route, IndexRoute, Router, browserHistory } from "react-router";
-import { Form } from 'semantic-ui-react'
-    	const options = [
-    	  { key: 'm', text: 'Male', value: 'male' },
-    	  { key: 'f', text: 'Female', value: 'female' },
-    	]
+import { Form } from 'semantic-ui-react';
 
-class NameForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    	name: '',
-    	phone: '',
-    	email: '',
-    	sport: '',
-    	gender: '',
-    	ready: true,
+// Include the Main React Dependencies
+import ReactDOM from "react-dom";
+import routes from "./config/routes";
 
-    };
+ReactDOM.render(routes, document.getElementById("app"));
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
+    	
 
-  handleSubmit(event) {
+//       const options = [
+//     	  { key: 'm', text: 'Male', value: 'male' },
+//     	  { key: 'f', text: 'Female', value: 'female' },
+//     	]
+
+// class NameForm extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//     	name: '',
+//     	phone: '',
+//     	email: '',
+//     	sport: '',
+//     	gender: '',
+//     	ready: true,
+
+//     };
+
+//     this.handleChange = this.handleChange.bind(this);
+//     this.handleSubmit = this.handleSubmit.bind(this);
+//   }
+
+//   handleChange(event) {
+//     this.setState({value: event.target.value});
+//   }
+
+//   handleSubmit(event) {
     
-    event.preventDefault();
-  }
+//     event.preventDefault();
+//   }
 
-  render() {
-    const value = this.state.value  
-    return (
-      <Form>
-        <Form.Group widths='equal'>
-          <Form.Input label='First name' placeholder='First name' />
-          <Form.Input label='Last name' placeholder='Last name' />
-          <Form.Select label='Gender' options={options} placeholder='Gender' />
-        </Form.Group>
-        <Form.Group inline>
-          <label>Size</label>
-          <Form.Radio label='Small' value='sm' checked={value === 'sm'} onChange={this.handleChange} />
-          <Form.Radio label='Medium' value='md' checked={value === 'md'} onChange={this.handleChange} />
-          <Form.Radio label='Large' value='lg' checked={value === 'lg'} onChange={this.handleChange} />
-        </Form.Group>
-        <Form.TextArea label='About' placeholder='Tell us more about you...' />
-        <Form.Checkbox label='I agree to the Terms and Conditions' />
-        <Form.Button>Submit</Form.Button>
-      </Form>
-    );
-  }
-}
+//   render() {
+//     const value = this.state.value  
+//     return (
+//       <Form>
+//         <Form.Group widths='equal'>
+//           <Form.Input label='First name' placeholder='First name' />
+//           <Form.Input label='Last name' placeholder='Last name' />
+//           <Form.Select label='Gender' options={options} placeholder='Gender' />
+//         </Form.Group>
+//         <Form.Group inline>
+//           <label>Size</label>
+//           <Form.Radio label='Small' value='sm' checked={value === 'sm'} onChange={this.handleChange} />
+//           <Form.Radio label='Medium' value='md' checked={value === 'md'} onChange={this.handleChange} />
+//           <Form.Radio label='Large' value='lg' checked={value === 'lg'} onChange={this.handleChange} />
+//         </Form.Group>
+//         <Form.TextArea label='About' placeholder='Tell us more about you...' />
+//         <Form.Checkbox label='I agree to the Terms and Conditions' />
+//         <Form.Button>Submit</Form.Button>
+//       </Form>
+//     );
+//   }
+// }
 
-export default NameForm
+// export default NameForm
