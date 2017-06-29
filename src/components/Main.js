@@ -88,4 +88,4 @@ var Main = React.createClass({
 	}
 });
 
-export default Main 
+export default Main g
